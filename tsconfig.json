@@ -10,13 +10,14 @@
         "noImplicitAny": false,
         "typeRoots": [
             "node_modules/@types",
-            "src/@types"
+            "types"
         ]
     },
     "exclude": [
         "node_modules"
     ],
     "include": [
-        "src/**/*.ts"
+        "main.ts",
+        "packages/**/*.ts"
     ]
 }

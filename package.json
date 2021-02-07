@@ -1,7 +1,9 @@
 {
-  "name": "momo-ui",
-  "version": "0.0.1",
+  "name": "momo-ui-beta",
+  "version": "0.0.2-base",
   "description": "轻量级的组件库",
+  "author": "wangyongcun",
+  "license": "MIT",
   "main": "lib/index.js",
   "style": "lib/index.css",
   "repository": {
@@ -12,22 +14,22 @@
     "ui",
     "vue",
     "vue3",
-    "mobile",
-    "frontend",
     "component",
     "components"
   ],
-  "author": "youzanfe",
-  "license": "MIT",
+  "files": [
+    "lib",
+    "README.md"
+  ],
   "bugs": {
     "url": "https://github.com/1006008051/momo-ui/issues"
   },
   "scripts": {
-    "dev": "vuepress dev src",
-    "build": "webpack --progress",
-    "docs": "vuepress build src",
-    "npm": "npm publish",
-    "io": "git push -f git@github.com:1006008051/1006008051.github.io.git master"
+    "dev": "vuepress dev",
+    "build": "webpack",
+    "docs": "vuepress build",
+    "publish": "npm publish",
+    "push": "git push -f git@github.com:1006008051/1006008051.github.io.git master"
   },
   "browserslist": [
     "last 2 versions",
@@ -35,8 +37,10 @@
   ],
   "devDependencies": {
     "@types/webpack-env": "^1.16.0",
+    "@vuepress/plugin-back-to-top": "^1.8.0",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.3",
     "css-loader": "^5.0.1",
     "less": "^4.1.0",
     "less-loader": "^7.3.0",
@@ -45,12 +49,13 @@
     "postcss": "^8.2.4",
     "postcss-loader": "^4.2.0",
     "postcss-preset-env": "^6.7.0",
+    "require-context": "^1.1.0",
     "style-loader": "^2.0.0",
     "ts-loader": "^8.0.14",
     "typescript": "^4.1.3",
     "url-loader": "^4.1.1",
+    "vue": "^2.6.12",
     "vue-loader": "^15.9.6",
-    "vue-template-compiler": "^2.6.12",
     "vuepress": "^1.8.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12"
