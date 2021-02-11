@@ -7,5 +7,5 @@ export default {
 };
 </script>
 <style lang="less">
-@import url("@style/button.less");
+  @import url('../../style/button.less');
 </style>

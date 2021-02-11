@@ -1,11 +1,12 @@
 const path = require('path');
 const pkg = require('./package.json'); //pkg信息
-const { VueLoaderPlugin } = require('vue-loader');
+const { VueLoaderPlugin } = require('vue-loader-v16');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); //清除打包文件
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // 分离css
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin'); //压缩css
 const copyPlugin = require('copy-webpack-plugin');
-const { entry } = require('./main.js');// 获取所有的入口文件
+const webpackBar = require('webpackbar');
+const { entry } = require('./main.ts');// 获取所有的入口文件
 console.log(entry)
 // webpack配置
 module.exports = {
@@ -28,6 +29,7 @@ module.exports = {
         }
     },
     plugins: [
+        new webpackBar(),
         new CleanWebpackPlugin(),
         new OptimizeCSSAssetsPlugin(),
         new VueLoaderPlugin(),
@@ -58,7 +60,7 @@ module.exports = {
             {
                 test: /\.vue$/,
                 use: {
-                    loader: 'vue-loader',
+                    loader: 'vue-loader-v16',
                     options: {
                         preserveWhitespace: false // 不要留空白
                     }
